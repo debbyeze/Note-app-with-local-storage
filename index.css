@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family:  Tahoma, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 26px;
+  padding: 20px;
+  color: goldenrod;
+}
+.wrapper {
+  display: flex;
+  padding-top: 30px;
+  flex-direction: row;
+
+}
+.form{
+  flex: 1;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  border:2px dashed black;
+  background-color: black;
+  border-radius: 10px;
+  padding: 20px;
+  color: goldenrod;
+  box-shadow: 1px 3px 5px silver;
+}
+label {
+  padding: 10px;
+}
+input {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 1;
+}
+button {
+  margin-top: 10px;
+  cursor: pointer;
+  height: 35px;
+  border-radius: 10px;
+  background-color: goldenrod;
+  border: none;
+  color: white;
+  font-size: large;
+}
+button:hover{
+  background-color: white;
+  color: gold;
+}
+#notes-container {
+  flex: 1;
+  display: none;
+  
+}
+ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+li {
+  list-style-type: none;
+
+}
+
+li > div {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 1px 3px 5px silver;
+  background-color: #fff;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+ li > div:hover{
+cursor: pointer;
+ background-color: gold;
+ color: white;
+ overflow:auto;
+}
+caption{
+position: absolute;
+bottom: 0;
+right: 0;
+font-size: small;
+color: goldenrod;
+}
+li > div > p{
+ font-size: 20px;
+ padding: 10px 0px;
+ text-align:start;
+ word-wrap:normal;
+ 
+ 
+}
+h6{
+  font-size: 20px;
+}
+@media screen and (max-width: 922px) {
+  .wrapper{
+    flex-direction: column;
+  }
+  .form{
+     margin-bottom: 40px;
+  }
+}
