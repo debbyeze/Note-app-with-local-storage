@@ -6,10 +6,12 @@ document.querySelector("form").onsubmit = (e) => {
   const date = document.getElementById("dob");
   console.log(title.value, desc.value, date.value);
 
-  if (!title && title.trim === "" && !desc && desc.trim === "" && !date && date.trim === "") {
+  if ( title.value == "" && desc.value == ""  && date.value == "") {
     return console.log("No Input");
+  } else{
+      addNote(title.value, desc.value, date.value)
   }
-    addNote(title.value, desc.value, date.value)
+    
 };
 
 function addNote(title, desc, date) {
