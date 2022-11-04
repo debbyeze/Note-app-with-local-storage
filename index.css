@@ -4,8 +4,16 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #5858d8;
+  background-color:#ffffff;
   font-family:  Tahoma, sans-serif;
+  position: relative;
+}
+
+main{
+ position: inherit;
+ background-color: #5858d8;
+ margin: 10px;
+ box-shadow: 2px 5px 5px 2px silver;
 }
 
 h2 {
@@ -22,6 +30,8 @@ h2 {
 }
 .form{
   flex: 1;
+  margin-bottom: 20px;
+
 }
 form {
   display: flex;
@@ -31,19 +41,20 @@ form {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
-  /* box-shadow: 1px 3px 5px silver; */
 }
 label {
   padding: 10px;
   color: #5858d8;
 }
-input {
+input, textarea {
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
+  font-size: 1rem;
 }
 .btn{
-margin: auto; 
+display: flex;
+justify-content: center;
 }
 button {
   cursor: pointer;
@@ -76,15 +87,13 @@ li {
 }
 
 li > div {
-  width: 200px;
-  height: 200px;
-  padding: 10px;
+  width: 300px;
+  height: 250px;
+  padding: 1rem;
   border: 1px solid black;
   border-radius: 10px;
   background-color: #fff;
   margin: 10px;
-  text-align: center;
-  position: relative;
   overflow:hidden;
 }
  li > div:hover{
@@ -93,15 +102,15 @@ cursor: pointer;
  color: white;
  overflow:auto;
 }
-li > div:hover caption{
+li > div:hover span{
  color: black;
 }
-caption{
-position: absolute;
-bottom: 0;
-right: 0;
-font-size: small;
+span{
+font-size: 0.8em;
 color: #5858d8;
+margin-top: 30px;
+text-align: left;
+
 }
 li > div > p{
  font-size: 1em;
@@ -111,13 +120,22 @@ li > div > p{
  line-height: 1.5em;
  
  
+ 
 }
 h6{
   font-size: 20px;
+    border-bottom:1px solid #5858d8;
+    padding-bottom: 5px;
+   text-align: center;
+
 }
 @media screen and (max-width: 922px) {
   .wrapper{
     flex-direction: column;
+  }
+  form{
+  margin: 0 5%;
+  
   }
   #notes-container{
   background-color: #ffffff;
@@ -127,6 +145,8 @@ h6{
   }
   li > div{
    border: 2px solid #5858d8;
+   width: 90vw;
+   height: 200px;
   }
   .form{
      margin-bottom: 40px;

@@ -36,13 +36,13 @@ function showNotes() {
       const div = document.createElement("div");
       const h6 = document.createElement("h6");
       const p = document.createElement("p");
-      const caption = document.createElement("caption");
+      const span = document.createElement("span");
       h6.innerHTML = note.title;
       p.innerHTML = note.desc;
-      caption.innerHTML = note.date;
+      span.innerHTML ="Scheduled Date: " + note.date;
       div.appendChild(h6);
+     div.appendChild(span);
       div.appendChild(p);
-      div.appendChild(caption);
       li.appendChild(div);
       ul.appendChild(li);
   
