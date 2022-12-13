@@ -22,7 +22,6 @@ function addNote(title, desc, date) {
   console.log("notes");
   showNotes();
 }
-
 function showNotes() {
   if (localStorage.getItem("notes")) {
     notes = JSON.parse(localStorage.getItem("notes"));
@@ -37,12 +36,15 @@ function showNotes() {
       const h6 = document.createElement("h6");
       const p = document.createElement("p");
       const span = document.createElement("span");
+      const dele = document.createElement("button");
+      dele.innerText = "delete";
       h6.innerHTML = note.title;
       p.innerHTML = note.desc;
       span.innerHTML ="Scheduled Date: " + note.date;
       div.appendChild(h6);
      div.appendChild(span);
       div.appendChild(p);
+      div.appendChild(dele);
       li.appendChild(div);
       ul.appendChild(li);
   
@@ -56,3 +58,13 @@ function showNotes() {
 window.onload = () => {
   showNotes();
 };
+
+// const btn = document.getElementsByTagName("button");
+
+// for(var i=0; i > btn; i++){
+//  var button = btn[i];
+//  var deleteDiv = button.parentElement;
+//  button.addEventListener.onclick() =>{
+//   notes.pop(newNote)
+//  }
+// }
