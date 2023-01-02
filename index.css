@@ -30,12 +30,26 @@ h2 {
 .form{
   flex: 1;
   margin-bottom: 20px;
-  
-  
-
 }
+
+.add-note-icon{
+background-color: #fff;
+width: 100px;
+border-radius:15px;
+font-size: 15px;
+margin-left: 40%;
+margin-top:10%;
+cursor: pointer;
+font-weight: bold;
+text-align:center;
+}
+.add-note-icon img{
+display:block;
+margin:auto;
+}
+
 form {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   margin: 0 15%;
@@ -79,7 +93,7 @@ input[type="reset"]:hover, input[type="submit"]:hover{
   flex: 1;
   justify-content: center;
   display: none;
-  border-left: 1px groove #F2E5D7;
+  border-left: 5px groove #F2E5D7;
   
 }
 ul{
@@ -167,7 +181,7 @@ h6{
   margin: 0 5%;
   }
   #notes-container {
-    border-top: 1px groove #F2E5D7;
+    border-top: 5px groove #F2E5D7;
   }
   button{
   width: 100px;

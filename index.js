@@ -1,3 +1,6 @@
+const noteIcon = document.querySelector(".add-note-icon");
+const noteForm = document.querySelector("form");
+
 let notes = [];
 document.querySelector("form").onsubmit = (e) => {
   e.preventDefault();
@@ -11,6 +14,8 @@ document.querySelector("form").onsubmit = (e) => {
   } else{
       addNote(title.value, desc.value, date.value)
   }
+  noteIcon.style.display="block";
+ noteForm.style.display="none";
     
 };
 
@@ -58,6 +63,12 @@ function showNotes() {
 window.onload = () => {
   showNotes();
 };
+
+
+noteIcon.addEventListener("click", ()=>{
+noteIcon.style.display="none";
+ noteForm.style.display="flex";
+});
 
 // const btn = document.getElementsByTagName("button");
 
